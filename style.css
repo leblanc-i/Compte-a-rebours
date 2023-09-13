@@ -1,7 +1,20 @@
 body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.app {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   text-align: center;
 }
 #countdownDisplay {
   font-size: 5rem;
+}
+#choice {
+  width: 5rem;
+  text-align: center;
+  border-radius: 5px;
+  outline: none;
 }

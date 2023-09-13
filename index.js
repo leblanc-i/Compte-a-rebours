@@ -13,10 +13,14 @@ let countDown = () => {
   } else {
         sec = seconds;
   }
-
   countdownDisplay.textContent = minutes + " : " + sec;
   totalSeconds--;
-  clearInterval(interval);
+  if (totalSeconds > 0) {
+    totalSeconds--;
+  } else {
+    countdownDisplay.textContent = "C'est terminé";
+    clearInterval(interval);
+  }
 };
 
 // Créer un événement à la validation du form pour lancer le compte à rebours
@@ -28,6 +32,7 @@ form.addEventListener("submit", (e) => {
   } else {
     totalSeconds = choice.value * 60;
     choice.value = "";
-    interval = setInterval(countDown, 100);
+    clearInterval(interval);
+    interval = setInterval(countDown, 1000);
   }
 });
