@@ -14,7 +14,6 @@ let countDown = () => {
         sec = seconds;
   }
   countdownDisplay.textContent = minutes + " : " + sec;
-  totalSeconds--;
   if (totalSeconds > 0) {
     totalSeconds--;
   } else {
